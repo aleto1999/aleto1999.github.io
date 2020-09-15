@@ -1,0 +1,66 @@
+h1 {
+color: #c5afa0;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+
+section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  height: 100vh;
+  background: url("../images/try.png");
+  background-size: cover;
+
+}
+
+
+
+.content {
+  display: table-cell;
+  vertical-align: middle;
+
+}
+
+.headline {
+  color: white;
+  font-family: sans-serif;
+  font-size: 2.5rem;
+}
+
+.highlight {
+  transition: all 0.2s ease;
+}
+
+.highlight:hover {
+  text-shadow: 0 2.1rem #e4b1ab, 0 -2.1rem #e4b1ab;
+  cursor: pointer;
+}
+
+
+
+footer {
+  height: 30vh;
+
+  padding: 1% 5%;
+  text-align:center;
+  background-color: #e4b1ab;
+  color: white;
+
+  a {
+    color: #FE4B74;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
