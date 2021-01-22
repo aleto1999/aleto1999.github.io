@@ -1,5 +1,7 @@
 h1 {
-color: #c5afa0;
+color: #3c1361;
+font-size: 13rem;
+
 
 }
 
@@ -20,8 +22,20 @@ section {
   margin: 0;
   max-width: none;
   height: 100vh;
-  background: url("../images/try.png");
+
+
+}
+
+section.home {
+
+  background: url("../images/back_collage.png");
   background-size: cover;
+
+}
+
+section.about {
+
+  background-color: white;
 
 }
 
@@ -30,11 +44,12 @@ section {
 .content {
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
 
 }
 
 .headline {
-  color: white;
+  color: black;
   font-family: sans-serif;
   font-size: 2.5rem;
 }
@@ -48,6 +63,27 @@ section {
   cursor: pointer;
 }
 
+img.profile {
+
+  float: left;
+  width: 45%;
+  border-radius: 2%;
+}
+
+.body-text {
+
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+  vertical-align: center; 
+
+
+}
+
+
+
+
+
 
 
 footer {
@@ -57,10 +93,41 @@ footer {
   text-align:center;
   background-color: #e4b1ab;
   color: white;
+  vertical-align: center; 
 
   a {
     color: #FE4B74;
     font-weight: 500;
     text-decoration: none;
   }
+
 }
+
+
+
+
+
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+
+
+
+.topnav {
+  background-color: white;
+  overflow: visible;
+
+}
+
+
