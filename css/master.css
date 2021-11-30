@@ -1,3 +1,12 @@
+p {
+  font-size: 18px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
 h1 {
   color: black;
   font-size: 13rem;
@@ -16,6 +25,17 @@ body {
   margin: 0;
 }
 
+footer {
+
+  height: 30vh;
+  padding: 1% 5%;
+  text-align:center;
+  background-color: #e4b1ab;
+  color: white;
+  vertical-align: center; 
+  bottom: 0;
+
+}
 
 
 section {
@@ -43,10 +63,6 @@ section.about {
 
 }
 
-div #sketch {
-  padding: 20px;
-}
-
 
 .content {
   display: table-cell;
@@ -70,73 +86,63 @@ div #sketch {
   cursor: pointer;
 }
 
-img.profile {
-
-  float: left;
-  width: 45%;
-  border-radius: 2%;
-}
-
-.body-text {
-
-  color: black;
-  font-size: 1.5rem;
-  text-align: center;
-  vertical-align: center; 
-
-
-}
-
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-footer {
-
-  height: 30vh;
-  padding: 1% 5%;
-  text-align:center;
-  background-color: #e4b1ab;
-  color: white;
-  vertical-align: center; 
-  bottom: 0;
-
-  a {
-    color: #FE4B74;
-    font-weight: 500;
-    text-decoration: none;
-
-  }
-
-}
-
-
-
-
-
-
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(20vh);
-  visibility: hidden;
-  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-  will-change: opacity, visibility;
-}
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: none;
-  visibility: visible;
-}
-
-
-
-
 .topnav {
   background-color: white;
   overflow: visible;
 
 }
+
+div.sketch {
+  margin: auto;
+  padding-top: 30vh;
+  padding-bottom: 30vh;
+  width: 50%;
+
+}
+
+img.sketch {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 10px;
+}
+
+
+/*.overlay {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.overlay img{
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  transform: scale(0.95);
+  transition: transform .3s;
+}
+
+.overlay:target {
+  visibility: visible;
+  outline: none;
+  cursor: default;
+}
+
+.overlay:target img {
+    transform: scale(1);
+}*/
+
 
 
