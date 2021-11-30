@@ -44,9 +44,7 @@ function draw() {
   rotateY(frameCount * 0.1);
   frameRate(15);
 
-  // randomly select color, create new tetra 
-  print(fill_color);
-  if (fill_color < colors.length){
+  if (fill_color < indices.length){
     curr_color = colors[indices[fill_color]];
     let temp = new Tetra(p1,p2,p3,p4,curr_color);
     tetras.push(temp);
