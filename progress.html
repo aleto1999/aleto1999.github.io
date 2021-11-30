@@ -1,8 +1,21 @@
 <link rel="stylesheet" href="css/master.css">
-
+<script language="javascript" type="text/javascript" src="sketches/p5.min.js"></script>
 <html>
-      <div class="sketch">
-            <script language="javascript" type="text/javascript" src="sketches/tetrahedron/test/test.js"></script>
+
+      <div class="topnav">
+          <span class="headline"> <span class="topnav-highlight"><a href="">HOME</a></span></span>
+          <span class="headline"> | <span class="topnav-highlight"><a href="/about.html">ABOUT</a></span></span>
+          <span class="headline"> | <span class="topnav-highlight"><a href="/progress.html">PROGRESS</a></span> </span>
+          <span class="headline"> | <span class="topnav-highlight"><a href="/daily-sketch.html">DAILY SKETCH</a></span> </span>
       </div>
-      
+
+
+      <script language="javascript" type="text/javascript" src="sketches/tetrahedron/tetrahedron.js"></script>
+      <div class="sketch">
+            <span class="headline">Tetrahedrons</span>
+            <div id="animation"></div>
+            <p><i>Tetrahedrons</i> is a piece created with the javascript library p5.js by generating one tetrahedron, randomly selecting one face, and generating another tetrahedron that shares that face. This process is repeated, until the structure is complete. Each time the page is refreshed, the output will be slightly different. The above is a depiction of the sentiment analysis of female pronouns in Jane Austen's <i>Pride and Prejudice</i>. Colors that are closer to pink represent positive sentiment, while colors closer to blue represent more negative sentiment.</p>
+            <p>The randomization makes the animation interesting, as a new structure will be generated each time the animation is started. However, this also means that the structure's aesthetic merit varies in a way that does not correlate to the data. An ugly structure may represent a novel with largely positive sentiment toward women, while a beautiful structure may represent a novel with negative sentiment.</p>
+            <p>The clean, geometrical lines of the piece are reminiscent of early computer art. In this way it stays within the vision for the project and provides a bit of irony and metaphor. However, this aesthetic is not the most conducive way to visualize the data in an evocative way. The lines and color blocks seem harsh and cold.</p>
+      </div>
 </html>

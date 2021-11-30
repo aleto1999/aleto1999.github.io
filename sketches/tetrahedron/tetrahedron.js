@@ -10,20 +10,23 @@ let colors = [];
 let fill_color = 0;
 let lines;
 // indices = [7, 8, 9, 7, 6, 7, 6, 5, 5];
-indices = [6, 5, 4, 6, 7, 6, 7, 8, 8];
+let indices = [6, 5, 4, 6, 7, 6, 7, 8, 8];
+
+
+
 
 
 function setup() {
 
-  let canvas = createCanvas(windowWidth * 0.4, windowHeight * 0.4,WEBGL);
-  canvas.parent('sketch');
+  let canvas = createCanvas(windowWidth * 0.5, windowHeight * 0.5,WEBGL);
+  canvas.parent('animation');
   background('black');
   ortho();
   ambientLight(100);
 
-  p1 = new Point(20,20,20);
-  p2 = new Point(20,-20,-20);
-  p3 = new Point(-20,20,-20);
+  p1 = new Point(10,10,10);
+  p2 = new Point(10,-10,-10);
+  p3 = new Point(-10,10,-10);
   p4 = 'NULL'; 
 
   // color scheme of structure 
@@ -43,27 +46,32 @@ function draw() {
 
   // randomly select color, create new tetra 
   print(fill_color);
-  curr_color = colors[indices[fill_color]];
-  let temp = new Tetra(p1,p2,p3,p4,curr_color);
-  tetras.push(temp);
+  if (fill_color < colors.length){
+    curr_color = colors[indices[fill_color]];
+    let temp = new Tetra(p1,p2,p3,p4,curr_color);
+    tetras.push(temp);
+
+    // select three of four points to choose plane for next tetra 
+    let points = [temp.p1,temp.p2,temp.p3,temp.p4];
+    let exclude = int(random(points.length));
+    points.splice(exclude,1);
+
+    p1 = points[0]; 
+    p2 = points[1];
+    p3 = points[2];
+    p4 = 'NULL';
+
+    if (tetras.length % 50 == 0) {
+      fill_color++;
+    }
+  }
+
 
   for (let i = 0; i < tetras.length; i++){
     tetras[i].display();
   }
 
-  // select three of four points to choose plane for next tetra 
-  let points = [temp.p1,temp.p2,temp.p3,temp.p4];
-  let exclude = int(random(points.length));
-  points.splice(exclude,1);
-
-  p1 = points[0]; 
-  p2 = points[1];
-  p3 = points[2];
-  p4 = 'NULL';
-
-  if (tetras.length % 50 == 0) {
-    fill_color++;
-  }
+  
 
 
 }
