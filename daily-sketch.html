@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="css/master.css">
+<script language="javascript" type="text/javascript" src="sketches/p5.min.js"></script>
+<script language="javascript" type="text/javascript" src="sketches/lavalamp1/lavalamp1.js"></script>
 <html>
 
 
@@ -34,6 +36,16 @@
     <img class="sketch" src="./images/sketch-11-30-2.jpg" alt="Jellyfish Drawing">
     <p>Today I also put some more touches on a jellyfish drawing that I began over the summer. My goal was to emphasize the fishbowl, as round pieces of glass are extremely challenging to communicate well. It's a work in progress...</p>
 
+</div>
+
+<div class="sketch">
+    <span class="headline">2021.12.01</span>
+    <iframe class="yt_embed"src="https://www.youtube.com/embed/U3EBBJnVmt0?autoplay=1&mute=1"></iframe> 
+    <p>This morning while on our weekly update call, I mentioned to Scott that I was planning to make a drawing of a jellyfish inside of a lava lamp rather than a fishbowl (above). This sparked Scott's imagination and he suggested that I create a lava lamp simulation to use as a form of data visualization. Inspired by this conversation, I created the below lava lamp simulation in Processing as my daily sketch. </p>
+    <div class="centered" id="lavalamp1"></div>
+    <p>The simulation is a prototype for something a bit more sophisticated. Currently, the sketch consists of 4 "leader" and 8 "follower" ellipses traveling through a vector field. The vector field is re-generated every so often so that the ellipses don't fall into a pattern. The "followers" also change leaders every so often to simulate the bits of lava that break off of larger pieces in an actual lava lamp. </p>
+    <p>Some ideas for improving the sketch are to dive into the pixel-level to create more organic-looking shapes around the ellipses, while still using the ellipses as the drivers of movement. I also would consider transitioning into WebGL 3D to add lighting and the z-dimension. I could potentially capture the bottom-lighting and glow of a lava lamp.  </p>
+    <p>If worked into a higher-quality version, the lava lamp could be used as a data visualization tool. Though I'm unsure of how I would make that happen yet, I'd love to explore the idea of a multi-colored lava lamp. Traditionally this effect is created by adding different colored lighting at the top and bottom of the lamp. However, because this is a simulation, it may be interesting to explore this theme without the inherent limitations of physical matter. </p>
 </div>
 
 

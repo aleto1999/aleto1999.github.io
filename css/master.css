@@ -163,4 +163,22 @@ img.sketch {
 }*/
 
 
+iframe.yt_embed{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 50vh;
+  padding-top: 10px;
+  border: none;
+}
 
+#centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 50vh;
+  padding-top: 10px;
+  border: none;
+}
