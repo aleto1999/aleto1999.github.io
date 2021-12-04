@@ -34,7 +34,7 @@ const sketch = ( s ) => {
       let return_list = []
 
       for (let i = 0; i < pts.length - 1; i++){
-        let new_vec = s.chaikin_cut(pts[i],pts[i+1],0.1);
+        let new_vec = s.chaikin_cut(pts[i],pts[i+1],0.25);
         return_list.push(new_vec); 
       }
       pts = [];
