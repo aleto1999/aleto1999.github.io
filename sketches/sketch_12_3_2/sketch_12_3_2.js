@@ -26,7 +26,7 @@ const chaikin = ( c ) => {
 
   c.makeCurve = function(points){
 
-    c.showPoints(points);
+    c.showPoints(points,1);
     let pts = points; 
 
     for (let j = 0; j < c.iterations; j++){
@@ -42,8 +42,11 @@ const chaikin = ( c ) => {
       }
       pts = [];
       pts = return_list; 
-      c.showPoints(pts);
+      c.showPoints(pts,1);
     }
+    c.showPoints(pts,0);
+
+
 
 };
 
@@ -89,10 +92,22 @@ const chaikin = ( c ) => {
     return points; 
   }; 
 
-  c.showPoints = function(temp_points) {
+  c.showPoints = function(temp_points, final_it) {
 
-    c.stroke('black');
+    
     c.noFill();
+
+    if (final_it == 0) {
+
+      c.strokeWeight(2); 
+      c.stroke('red'); 
+
+    } else {
+
+      c.strokeWeight(1);
+      c.stroke('black');
+
+    }
 
     c.beginShape(); 
     for (let i = 0; i < temp_points.length; i++) {
