@@ -236,32 +236,35 @@ const lavaLamp3 = ( c ) => {
 			followerVec.mult(-1);
 			p5.Vector.add(this.pos,followerVec,followerBot);
 
-			c.fill('white');
+
 			// c.triangle(leaderBot.x,leaderBot.y,leaderTop.x,leaderTop.y,centerPt.x,centerPt.y);
 			// c.triangle(followerBot.x,followerBot.y,followerTop.x,followerTop.y,centerPt.x,centerPt.y);
 
 			c.stroke('white');
 			c.strokeWeight(4); 
+			c.noFill();
 
 			let botControlLeader = c.createVector(0,0);
 			let topControlLeader = c.createVector(0,0);
 			p5.Vector.add(leaderBot,leaderVec,botControlLeader); 
-			p5.Vector.mult(botControlLeader, 100);
+			p5.Vector.mult(botControlLeader, -2, botControlLeader);
 			leaderVec.mult(-1);
 			p5.Vector.add(leaderTop,leaderVec,topControlLeader); 
-			p5.Vector.mult(topControlLeader, 100);
+			p5.Vector.mult(topControlLeader, -2, topControlLeader);
 
 			let botControlFollower = c.createVector(0,0);
 			let topControlFollower = c.createVector(0,0);
 			p5.Vector.add(followerBot,followerVec,botControlFollower); 
-			p5.Vector.mult(botControlFollower, 100); 
+			p5.Vector.mult(botControlFollower, -2, botControlFollower); 
 			leaderVec.mult(-1);
 			p5.Vector.add(followerTop,followerVec,topControlFollower);
-			p5.Vector.mult(topControlFollower, 100); 
+			p5.Vector.mult(topControlFollower, -2, topControlLeader); 
 
 			c.curve (botControlLeader.x, botControlLeader.y, leaderTop.x,leaderTop.y, followerBot.x,followerBot.y, topControlFollower.x,topControlFollower.y); 
+			c.curve (topControlLeader.x, topControlLeader.y, leaderBot.x,leaderBot.y, followerTop.x,followerTop.y, topControlLeader.x,topControlLeader.y); 
 
-			console.log("should have seen something");
+			console.log(botControlLeader);
+			console.log(topControlFollower);
 
 
 
