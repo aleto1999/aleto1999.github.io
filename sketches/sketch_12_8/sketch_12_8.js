@@ -213,9 +213,5 @@ const centerNormalDotDraw = ( c ) => {
 
 let normalDotDrawP5 = new p5(normalDotDraw, 'sketch_12_8');
 let lineDrawP5 = new p5(lineDraw, 'sketch_12_8');
-
 let dotDrawP5 = new p5(dotDraw, 'sketch_12_8');
-
 let centerNormalDotDrawP5 = new p5(centerNormalDotDraw, 'sketch_12_8');
-
-
