@@ -8,6 +8,8 @@
 <script language="javascript" type="text/javascript" src="sketches/sketch_12_8/sketch_12_8.js"></script>
 <script language="javascript" type="text/javascript" src="sketches/lavalamp2/lavalamp2.js"></script>
 <script language="javascript" type="text/javascript" src="sketches/lavalamp3/lavalamp3.js"></script>
+<script language="javascript" type="text/javascript" src="sketches/sketch_12_16/sketch_12_16.js"></script>
+<script language="javascript" type="text/javascript" src="sketches/sketch_12_17/sketch_12_17.js"></script>
 
 <div class="topnav">
     <span class="headline"> <span class="topnav-highlight"><a href="/index.html">HOME</a></span></span>
@@ -49,7 +51,7 @@
 
 <div class="sketch">
     <span class="headline">2021.12.01</span>
-    <iframe class="yt_embed"src="https://www.youtube.com/embed/U3EBBJnVmt0?autoplay=1&mute=1"></iframe> 
+    <iframe class="yt_embed"src="https://www.youtube.com/embed/U3EBBJnVmt0?autoplay=1&mute=1"></iframe>
     <p>This morning while on our weekly update call, I mentioned to Scott that I was planning to make a drawing of a jellyfish inside of a lava lamp rather than a fishbowl (above). This sparked Scott's imagination and he suggested that I create a lava lamp simulation to use as a form of data visualization. Inspired by this conversation, I created the below lava lamp simulation in Processing as my daily sketch. </p>
     <div class="centered" id="lavalamp1"></div>
     <p>The simulation is a prototype for something a bit more sophisticated. Currently, the sketch consists of 4 "leader" and 8 "follower" ellipses traveling through a vector field. The vector field is re-generated every so often so that the ellipses don't fall into a pattern. The "followers" also change leaders every so often to simulate the bits of lava that break off of larger pieces in an actual lava lamp. </p>
@@ -70,7 +72,7 @@
     <p>**I hope my slight sarcasm and hint of self-deprecation are coming across here**</p>
     <p>But seriously, I can sew. I can put color blocks together in a way that looks artsy and sleek. Can I get a computer to do that in such a way that communicates the results of a data analysis? I have confidence that I can.</p>
     <p>Next steps include figuring out how using machine learning to create images actually works. If I can figure that out, I will generate several quilt patterns. Because creating a quilt can be extremely time-consuming I could buy the material and make a few. Then, I could display the unused patterns as part of the “exhibit”.</p>
-    <p>The idea plays a bit on the idea of female artists taking back stereotypically female crafts such as cross-stitch or crochet. Ah the possible levels of irony and metaphor.</p> 
+    <p>The idea plays a bit on the idea of female artists taking back stereotypically female crafts such as cross-stitch or crochet. Ah the possible levels of irony and metaphor.</p>
 
 </div>
 
@@ -112,15 +114,54 @@
     <p>I'm currently working to evolve from triangles to curves. I'm working with the p5.js function <i>curve</i> in which you give two points to a curve along with two control points. However, the control points don't seem to work the way I expect.</p>
     <p>I've also noticed a few bugs, including a follower ellipse jumping location when it hits a wall.  </p>
 </div>
-
-
+<div class="sketch">
+    <span class="headline">2021.12.15</span>
+    <img class="sketch" src="./images/sketch-12-15.png" alt="Color Pencil Egyptian Scale">
+    <p>Today's "sketch" is an update on my progress on the Egyptian scale detailed on 2021.12.13. It is completed in color pencil and I ultimately made no changes to the original sketch to attempt to balance it. I felt the lack of balance may better represent the metaphor.</p>
+    <p>Because it would be extremely boring to read someone's self-criticism, I'm instead not going to comment further on the piece and simply remind myself that art is always a process. As is re-learning old skills. </p>
+</div>
+<div class="sketch">
+    <span class="headline">2021.12.16</span>
+    <div class="centered" id="sketch_12_16_0"></div>
+</div>
+<div class="sketch">
+    <div class="centered_after" id="sketch_12_16_1"></div>
+    <p>Today I experimented with an online tool that generates a color gradient given two colors. I also created a quick python script that takes the colors in the format that the website gives and spits it out in a format that is usable in p5 js. </p>
+</div>
+<div class="sketch">
+  <span class="headline">2021.12.17</span>
+  <div class="slides" id="sketch_12_17"></div>
+  <div class="slides" id="sketch_12_17_1"></div>
+  <div class="slides" id="sketch_12_17_2"></div>
+  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+  <p>The slides above are iterations of the title page I'm creating for an online art journal that my friends and I are putting together. Ultimately it will be a full-page piece. </p>
+</div>
 
 <footer>
 
 
 </footer>
 
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("slides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+    }
+  </script>
+
 </html>
-
-
-

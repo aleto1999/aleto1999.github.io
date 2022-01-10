@@ -1,6 +1,11 @@
 <link rel="stylesheet" href="css/master.css">
+<!-- <script language="javascript" type="text/javascript" src="slideshow.js"></script> -->
 <script language="javascript" type="text/javascript" src="sketches/p5.min.js"></script>
 <script language="javascript" type="text/javascript" src="sketches/tetrahedron/tetrahedron.js"></script>
+<script language="javascript" type="text/javascript" src="sketches/frequency/sherlock_frequency.js"></script>
+<script language="javascript" type="text/javascript" src="sketches/frequency/alice_frequency.js"></script>
+<script language="javascript" type="text/javascript" src="sketches/frequency/pride_frequency.js"></script>
+<script language="javascript" type="text/javascript" src="sketches/frequency/gatsby_frequency.js"></script>
 <html>
 
       <div class="topnav">
@@ -16,7 +21,7 @@
             <p>Completed in acrylic paint, the above is one of the first vision sketches done for the project. The idea behind it is that each brushstroke represents a section of the book being depicted. The width of the stroke denotes the frequency with which female pronouns are used while the color depicts the detected sentiment. </p>
       </div>
 
-      
+
       <div class="sketch">
             <span class="headline">Tetrahedrons</span>
             <div id="animation"></div>
@@ -24,6 +29,59 @@
             <p>The randomization makes the animation interesting, as a new structure will be generated each time the animation is started. However, this also means that the structure's aesthetic merit varies in a way that does not correlate to the data. An ugly structure may represent a novel with largely positive sentiment toward women, while a beautiful structure may represent a novel with negative sentiment.</p>
             <p>The clean, geometrical lines of the piece are reminiscent of early computer art. In this way it stays within the vision for the project and provides a bit of irony and metaphor. However, this aesthetic is not the most conducive way to visualize the data in an evocative way. The lines and color blocks seem harsh and cold.</p>
       </div>
+
+      <div class="sketch">
+
+          <span class="headline">Untitled Frequency Analysis</span>
+          <div class="slides" id="gatsby">
+            <p>The Great Gatsby (F. Scott Fitzgerald, 1925)</p>
+          </div>
+
+          <div class="slides" id="sherlock">
+            <p>The Adventures of Sherlock Holmes (Arthur Conan Doyle, 1892)</p>
+          </div>
+
+          <div class="slides" id="alice">
+            <p>Alice in Wonderland (Lewis Carroll, 1865)</p>
+          </div>
+
+          <div class="slides" id="pride">
+            <p>Pride and Prejudice (Jane Austen, 1813)</p>
+          </div>
+
+
+          <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+
+          <p> Above is a visualization of a frequency analysis done to compare the number of mentions of female-specific versus male-specific nouns in novels.</p>
+          <p>The analysis involved calculating the number of sentences in a book that contain pre-defined female specific nouns, defining them as female sentences. Correspondingly, male sentences were calculated.</p>
+          <p>The number of dots in the three boxes on the left-hand side of each piece correspond to the ratio of male to female sentences. The right-hand side corresponds to the female to male ratio. This creates the effect of darker boxes communicating more mentions of the corresponding gender&#39s nouns.</p>
+          <p>The verticality of the boxes correspond to different sections of the story. The top two boxes represent the first third of the book, the second two the middle third of the book, and the final two the final third of the book. The number of “blocks” was arbitrary. Four blocks could have been selected, dividing the book into quarters and resulting in a piece with two columns and four rows. However, I chose to divide into thirds because we often think of a traditional story arc as having an exposition, climax, and resolution. The analysis does not seek to divide into these three sections (has that been done??), so the decision was mainly symbolic.</p>
+          <p>The visual piece was assembled by randomly generating the appropriate calculated number of points within the rectangular bounds of that section. </p>
+
+
+      </div>
+
       <footer>
       </footer>
+
+      <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+
+          function plusDivs(n) {
+            showDivs(slideIndex += n);
+          }
+
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slides");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+          }
+        </script>
 </html>
