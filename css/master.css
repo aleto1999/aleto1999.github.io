@@ -6,6 +6,9 @@ a {
   color: black;
   text-decoration: none;
 }
+a .in-text {
+  color: blue;
+}
 
 h1 {
   color: black;
@@ -63,6 +66,24 @@ section.about {
 
 }
 
+button.button1 {
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button.button1:hover {
+  background-color: #000000;
+  border: 2px solid #000000;
+  color: #FFFFFF;
+
+}
+
 
 .content {
   display: table-cell;
@@ -75,6 +96,13 @@ section.about {
   color: black;
   font-family: sans-serif;
   font-size: 2.5rem;
+
+}
+
+.sub-header {
+  color: black;
+  font-family: sans-serif;
+  font-size: 1.5rem;
 }
 
 .highlight {
@@ -126,6 +154,24 @@ img.sketch {
   padding-top: 10px;
 }
 
+div.report {
+  margin: auto;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  width: 60%;
+
+}
+
+div.figure {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+
+}
+
+div.section{
+  padding-bottom: 10vh; 
+
+}
 
 /*.overlay {
   position: fixed;
@@ -192,4 +238,15 @@ iframe.yt_embed{
   padding-top: 10px;
   margin-top: 100px;
   border: none;
+}
+
+div .graph {
+  width: 100%;
+}
+
+div .image-description {
+  font-style: italic;
+  width : 90%;
+  text-align: center
+
 }

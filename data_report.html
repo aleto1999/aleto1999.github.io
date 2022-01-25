@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="css/master.css">
+<script src="graphs/jquery.js"></script>
+<script>
+    $(function(){
+      $("#gutenberg_histo").load("graphs/gutenberg_histo.html");
+    });
+    $(function(){
+      $("#f_ratio_histo").load("graphs/f_ratio_histo.html");
+    });
+    $(function(){
+      $("#av_ratio_table").load("graphs/av_ratio_table.html");
+    });
+    $(function(){
+      $("#dominance_histo").load("graphs/dominance_histo.html");
+    });
+    $(function(){
+      $("#av_pos_sentiment_table").load("graphs/av_pos_sentiment_table.html");
+    });
+    </script>
+
+<html>
+
+      <div class="topnav">
+          <span class="headline"> <span class="topnav-highlight"><a href="/index.html">HOME</a></span></span>
+          <span class="headline"> | <span class="topnav-highlight"><a href="/about.html">ABOUT</a></span></span>
+          <span class="headline"> | <span class="topnav-highlight"><a href="/progress.html">PROGRESS</a></span> </span>
+          <span class="headline"> | <span class="topnav-highlight"><a href="/daily-sketch.html">DAILY SKETCH</a></span> </span>
+      </div>
+
+      <div class="report">
+
+        <div class="section">
+          <span class="headline">Data Set: Project Gutenberg Frequency and Sentiment Analysis</span>
+          <p> Project Gutenberg is an online library of books whose U.S. copyright has expired. I conducted a word frequency and
+              sentiment analysis on the fiction for which plain text files are available in the library. Note that the analysis,
+              along with its results are detailed below. Though Gutenberg does not provide the original
+              publish date of books in their metadata, they do provide the author birth and death year. To gain an understanding
+              of the factors of the analysis over time, birth year was used to order the books in a chronological manor. Figure 1
+              shows the books used in the analysis, organized by author birth year. Note that if you hover over elements in the
+              graph, annotations will appear. </p>
+
+          <div class="graph" id="gutenberg_histo"></div>
+          <div class="image-description">Figure 1: histogram of plaintext fiction available in the Gutenberg library</div>
+
+          <p>When conducting the analysis, I looped over each pertinent entry in the Gutenberg catalog, which can be found
+             <a class="in-text" href="https://www.gutenberg.org/ebooks/offline_catalogs.html">here</a>. I constructed two possible
+             urls for the book's plaintext version on the Gutenberg website. I queried the url, scraped all text from the page,
+             stripped the headers, and conducted the analysis. Of the 8362 books in my original set, I was able to successfully
+             complete the analysis for each.</p>
+        </div>
+
+        <div class="section">
+          <span class="sub-header">Frequency Analysis</span>
+          <p>In order to gain a better understanding of the presence of female vs. male characters in the books, I conducted two
+             sets of words: female-specific nouns and male-specific nouns. During the analysis, I identified all sentences
+             containing one or more of the "female-specific" nouns as a "female" sentence. I did the same with the male word set.
+             I returned the number of "female" sentences divided by the number of total sentences as a female frequency value,
+             abbreviated in the resulting dataset as "f_freq". I repeated for the "male" sentences, returning "m_freq". Mostly,
+             the results were unsurprising. </p>
+         <div class="figure">
+           <div class="graph" id="dominance_histo"></div>
+           <div class="image-description">Figure 2: histogram of books classified by ratio of female sentences to total gendered
+               sentences. Note that 0.5 would imply equal representation of males and females in the fiction gathered.</div>
+         </div>
+          <div class="figure">
+            <div class="graph" id="f_ratio_histo"></div>
+            <div class="image-description">Figure 3: histogram of books classified by ratio of female sentences to total gendered
+                sentences. Note that 0.5 would imply equal representation of males and females in the fiction gathered.</div>
+          </div>
+          <div class="figure">
+            <div class="graph" id="av_ratio_table"></div>
+            <div class="image-description">Figure 4: Average ratio of female to male sentences across time.</div>
+          </div>
+
+        </div>
+
+        <div class="section">
+          <span class="sub-header">Sentiment Analysis</span>
+          <div class="graph" id="av_pos_sentiment_table"></div>
+          <div class="image-description">Figure 5: </div>
+
+        </div>
+      </div>
+
+
+</html>
