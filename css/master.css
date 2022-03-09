@@ -154,6 +154,22 @@ img.sketch {
   padding-top: 10px;
 }
 
+img.sketch-hidden {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 10px;
+}
+
+img.sketch-hidden1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 10px;
+}
+
 div.report {
   margin: auto;
   padding-top: 15vh;
@@ -169,7 +185,7 @@ div.figure {
 }
 
 div.section{
-  padding-bottom: 10vh; 
+  padding-bottom: 10vh;
 
 }
 

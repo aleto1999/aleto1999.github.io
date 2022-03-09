@@ -132,10 +132,27 @@
   <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
   <p>The slides above are iterations of the title page I'm creating for an online art journal that my friends and I are putting together. Ultimately it will be a full-page piece. </p>
 </div>
+<div class="sketch">
+  <span class="headline">2021.03.07</span>
+  <img class="sketch-hidden" src="./images/sketch-03-07-1.jpg" alt="City Shift Art"</img>
+  <img class="sketch-hidden" src="./images/sketch-03-07-2.jpg" alt="Shoreline Shift Art"</img>
+  <img class="sketch-hidden" src="./images/sketch-03-07-3.jpg" alt="Shoreline Shift Art"</img>
+  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+  <p> Glitch art completed over weekend for fun </p>
+</div>
+
+<div class="sketch">
+  <span class="headline">2021.03.08</span>
+  <img class="sketch-hidden1" src="./images/sketch-03-08-1.jpg" alt="City Shift Art"</img>
+  <img class="sketch-hidden1" src="./images/sketch-03-08-2.jpg" alt="Shoreline Shift Art"</img>
+  <img class="sketch-hidden1" src="./images/sketch-03-08-3.jpg" alt="Shoreline Shift Art"</img>
+  <button class="w3-button w3-display-left" onclick="plusDivs1(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs1(+1)">&#10095;</button>
+  <p> Confetti art completed over weekend for fun </p>
+</div>
 
 <footer>
-
-
 </footer>
 
 
@@ -159,4 +176,43 @@
     }
   </script>
 
+  <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("sketch-hidden");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+      }
+    </script>
+
+    <script>
+        var slideIndex = 1;
+        showDivs1(slideIndex);
+
+        function plusDivs1(n) {
+          showDivs1(slideIndex += n);
+        }
+
+        function showDivs1(n) {
+          var i;
+          var x = document.getElementsByClassName("sketch-hidden1");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          x[slideIndex-1].style.display = "block";
+        }
+      </script>
 </html>
