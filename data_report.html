@@ -2,6 +2,15 @@
 <script src="graphs/jquery.js"></script>
 <script>
     $(function(){
+      $("#author_gender_pie").load("graphs/author_gender_pie.html");
+    });
+    $(function(){
+      $("#author_bp_pie").load("graphs/author_birthplace_pie.html");
+    });
+    $(function(){
+      $("#author_gb_bp_pie").load("graphs/author_gb_birthplace_pie.html");
+    });
+    $(function(){
       $("#gutenberg_histo").load("graphs/gutenberg_histo.html");
     });
     $(function(){
@@ -30,19 +39,31 @@
       <div class="report">
 
         <div class="section">
+
           <span class="headline">Data Set: Project Gutenberg Frequency and Sentiment Analysis</span>
           <p> Project Gutenberg is an online library of books whose U.S. copyright has expired. I conducted a word frequency and
               sentiment analysis on the fiction for which plain text files are available in the library. Note that the analysis,
-              along with its results are detailed below. Though Gutenberg does not provide the original
-              publish date of books in their metadata, they do provide the author birth and death year. To gain an understanding
+              along with its results are detailed below. </p>
+          <span class="sub-header">About the Dataset</span>
+          <p> About 8000 works of fiction with about 2500 different authors were taken from the library and used for analysis.
+              Though Gutenberg does not provide the original publish date of books in their metadata, they do provide the author birth
+              and death year. To gain an understanding
               of the factors of the analysis over time, birth year was used to order the books in a chronological manor. Figure 1
               shows the books used in the analysis, organized by author birth year. Note that if you hover over elements in the
               graph, annotations will appear. </p>
-
           <div class="graph" id="gutenberg_histo"></div>
           <div class="image-description">Figure 1: histogram of plaintext fiction available in the Gutenberg library</div>
+          <p> Each individual author was hand-tagged with binary gender and birth country. Based on these taggings, 62.1% or 1384 of the authors in
+              the dataset were male, 25.6% or 571 were female, and we were unable to find enough information to declare the gender of 12.% or 274 of the authors. </p>
+          <div class="pie" id="author_gender_pie"></div>
+          <p> Because the data set was solely books in English, the authors were largely English or American. We further subdivided authors from the UK into respective states. </p>
+          <div class="pie" id="author_bp_pie"></div>
+          <div class="pie" id="author_gb_bp_pie"></div>
 
-          <p>When conducting the analysis, I looped over each pertinent entry in the Gutenberg catalog, which can be found
+
+
+
+          <p> When conducting the analysis, I looped over each pertinent entry in the Gutenberg catalog, which can be found
              <a class="in-text" href="https://www.gutenberg.org/ebooks/offline_catalogs.html">here</a>. I constructed two possible
              urls for the book's plaintext version on the Gutenberg website. I queried the url, scraped all text from the page,
              stripped the headers, and conducted the analysis. Of the 8362 books in my original set, I was able to successfully

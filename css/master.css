@@ -260,6 +260,10 @@ div .graph {
   width: 100%;
 }
 
+div .pie {
+  width:80%;
+}
+
 div .image-description {
   font-style: italic;
   width : 90%;
