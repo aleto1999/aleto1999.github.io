@@ -5,6 +5,9 @@
       $("#author_gender_pie").load("graphs/author_gender_pie.html");
     });
     $(function(){
+      $("#author_gender_bar").load("graphs/author_gender_bar.html");
+    });
+    $(function(){
       $("#author_bp_pie").load("graphs/author_birthplace_pie.html");
     });
     $(function(){
@@ -20,10 +23,22 @@
       $("#av_ratio_table").load("graphs/av_ratio_table.html");
     });
     $(function(){
+      $("#female_author_av_ratio_table").load("graphs/female_author_av_ratio_table.html");
+    });
+    $(function(){
+      $("#male_author_av_ratio_table").load("graphs/male_author_av_ratio_table.html");
+    });
+    $(function(){
       $("#dominance_histo").load("graphs/dominance_histo.html");
     });
     $(function(){
       $("#av_pos_sentiment_table").load("graphs/av_pos_sentiment_table.html");
+    });
+    $(function(){
+      $("#female_av_pos_sentiment_table").load("graphs/female_av_pos_sentiment_table.html");
+    });
+    $(function(){
+      $("#male_av_pos_sentiment_table").load("graphs/male_av_pos_sentiment_table.html");
     });
     </script>
 
@@ -56,6 +71,7 @@
           <p> Each individual author was hand-tagged with binary gender and birth country. Based on these taggings, 62.1% or 1384 of the authors in
               the dataset were male, 25.6% or 571 were female, and we were unable to find enough information to declare the gender of 12.% or 274 of the authors. </p>
           <div class="pie" id="author_gender_pie"></div>
+          <div class="graph" id="author_gender_bar"></div>
           <p> Because the data set was solely books in English, the authors were largely English or American. We further subdivided authors from the UK into respective states. </p>
           <div class="pie" id="author_bp_pie"></div>
           <div class="pie" id="author_gb_bp_pie"></div>
@@ -92,13 +108,33 @@
             <div class="graph" id="av_ratio_table"></div>
             <div class="image-description">Figure 4: Average ratio of female to male sentences across time.</div>
           </div>
+          <div class="figure">
+            <div class="graph" id="female_author_av_ratio_table"></div>
+            <div class="image-description">Figure ?: Average ratio of female to male sentences across time in books written by female authors.</div>
+          </div>
+          <div class="figure">
+            <div class="graph" id="male_author_av_ratio_table"></div>
+            <div class="image-description">Figure ?: Average ratio of female to male sentences across time in books written by male authors.</div>
+          </div>
 
         </div>
 
         <div class="section">
           <span class="sub-header">Sentiment Analysis</span>
-          <div class="graph" id="av_pos_sentiment_table"></div>
-          <div class="image-description">Figure 5: </div>
+          <div class="figure">
+            <div class="graph" id="av_pos_sentiment_table"></div>
+            <div class="image-description">Figure ?: male, female, and unidentified authors </div>
+          </div>
+
+          <div class="figure">
+            <div class="graph" id="female_av_pos_sentiment_table"></div>
+            <div class="image-description">Figure ?: female authors </div>
+          </div>
+
+          <div class="figure">
+            <div class="graph" id="male_av_pos_sentiment_table"></div>
+            <div class="image-description">Figure ?: male authors</div>
+          </div>
 
         </div>
       </div>
