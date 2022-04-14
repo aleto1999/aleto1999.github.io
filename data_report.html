@@ -40,6 +40,12 @@
     $(function(){
       $("#male_av_pos_sentiment_table").load("graphs/male_av_pos_sentiment_table.html");
     });
+    $(function(){
+      $("#av_ratio_table_expanded_bins").load("graphs/av_ratio_table_expanded_bins.html");
+    });
+    $(function(){
+      $("#fiction_author_gender_bar_extended_bins").load("graphs/fiction_author_gender_bar_extended_bins.html");
+    });
     </script>
 
 <html>
@@ -103,6 +109,14 @@
             <div class="graph" id="f_ratio_histo"></div>
             <div class="image-description">Figure 3: histogram of books classified by ratio of female sentences to total gendered
                 sentences. Note that 0.5 would imply equal representation of males and females in the fiction gathered.</div>
+          </div>
+          <div class="figure">
+            <div class="graph" id="fiction_author_gender_bar_extended_bins"></div>
+            <div class="image-description"></div>
+          </div>
+          <div class="figure">
+            <div class="graph" id="av_ratio_table_expanded_bins"></div>
+            <div class="image-description">Average ratio of female to male sentences across time ... bins by every 10 years</div>
           </div>
           <div class="figure">
             <div class="graph" id="av_ratio_table"></div>
