@@ -57,8 +57,8 @@
           </div>
 
 
-          <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-          <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+          <button class="w3-button w3-display-left" onclick="plusDivsScatter(-1)">&#10094;</button>
+          <button class="w3-button w3-display-right" onclick="plusDivsScatter(+1)">&#10095;</button>
 
           <p> Above is a visualization of a frequency analysis done to compare the number of mentions of female-specific versus male-specific nouns in novels.</p>
           <p>The analysis involved calculating the number of sentences in a book that contain pre-defined female specific nouns, defining them as female sentences. Correspondingly, male sentences were calculated.</p>
@@ -110,13 +110,13 @@
 
       <script>
           var slideIndexScatter = 1;
-          showDivs(slideIndexsScatter);
+          showDivsScatter(slideIndexsScatter);
 
-          function plusDivs(n) {
+          function plusDivsScatter(n) {
             showDivs(slideIndexScatter += n);
           }
 
-          function showDivs(n) {
+          function showDivsScatter(n) {
             var i;
             var x = document.getElementsByClassName("scatter");
             if (n > x.length) {slideIndexScatter = 1}
@@ -126,8 +126,6 @@
             }
             x[slideIndexScatter-1].style.display = "block";
           }
-        </script>
-        <script>
             var slideIndex = 1;
             showDivs(slideIndex);
 
