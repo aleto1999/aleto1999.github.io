@@ -134,11 +134,11 @@
 </div>
 <div class="sketch">
   <span class="headline">2021.03.07</span>
-  <img class="sketch-hidden" src="./images/sketch-03-07-1.jpg" alt="City Shift Art"</img>
-  <img class="sketch-hidden" src="./images/sketch-03-07-2.jpg" alt="Shoreline Shift Art"</img>
-  <img class="sketch-hidden" src="./images/sketch-03-07-3.jpg" alt="Shoreline Shift Art"</img>
-  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+  <img class="sketch-hidden0" src="./images/sketch-03-07-1.jpg" alt="City Shift Art"</img>
+  <img class="sketch-hidden0" src="./images/sketch-03-07-2.jpg" alt="Shoreline Shift Art"</img>
+  <img class="sketch-hidden0" src="./images/sketch-03-07-3.jpg" alt="Shoreline Shift Art"</img>
+  <button class="w3-button w3-display-left" onclick="plusDivs0(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs0(+1)">&#10095;</button>
   <p> Glitch art completed over weekend for fun </p>
 </div>
 
@@ -149,6 +149,17 @@
   <img class="sketch-hidden1" src="./images/sketch-03-08-3.jpg" alt="Shoreline Shift Art"</img>
   <button class="w3-button w3-display-left" onclick="plusDivs1(-1)">&#10094;</button>
   <button class="w3-button w3-display-right" onclick="plusDivs1(+1)">&#10095;</button>
+  <p> Confetti art completed over weekend for fun </p>
+</div>
+
+
+<div class="sketch">
+  <span class="headline">2021.05.05</span>
+  <img class="sketch-hidden2" src="./images/sketch-05-05-1.jpg" alt="City Shift Art"</img>
+  <img class="sketch-hidden2" src="./images/sketch-05-05-2.jpg" alt="Shoreline Shift Art"</img>
+  <img class="sketch-hidden2" src="./images/sketch-05-05-3.jpg" alt="Shoreline Shift Art"</img>
+  <button class="w3-button w3-display-left" onclick="plusDivs2(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs2(+1)">&#10095;</button>
   <p> Confetti art completed over weekend for fun </p>
 </div>
 
@@ -178,15 +189,15 @@
 
   <script>
       var slideIndex = 1;
-      showDivs(slideIndex);
+      showDivs0(slideIndex);
 
-      function plusDivs(n) {
-        showDivs(slideIndex += n);
+      function plusDivs0(n) {
+        showDivs0(slideIndex += n);
       }
 
-      function showDivs(n) {
+      function showDivs0(n) {
         var i;
-        var x = document.getElementsByClassName("sketch-hidden");
+        var x = document.getElementsByClassName("sketch-hidden0");
         if (n > x.length) {slideIndex = 1}
         if (n < 1) {slideIndex = x.length}
         for (i = 0; i < x.length; i++) {
@@ -215,4 +226,24 @@
           x[slideIndex-1].style.display = "block";
         }
       </script>
+
+      <script>
+          var slideIndex = 1;
+          showDivs2(slideIndex);
+
+          function plusDivs2(n) {
+            showDivs2(slideIndex += n);
+          }
+
+          function showDivs2(n) {
+            var i;
+            var x = document.getElementsByClassName("sketch-hidden2");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+          }
+        </script>
 </html>
