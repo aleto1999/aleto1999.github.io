@@ -40,19 +40,19 @@
       <div class="sketch">
 
           <span class="headline">Untitled Frequency Analysis</span>
-          <div class="sketch" id="gatsby">
+          <div class="scatter" id="gatsby">
             <p>The Great Gatsby (F. Scott Fitzgerald, 1925)</p>
           </div>
 
-          <div class="sketch" id="sherlock">
+          <div class="scatter" id="sherlock">
             <p>The Adventures of Sherlock Holmes (Arthur Conan Doyle, 1892)</p>
           </div>
 
-          <div class="sketch" id="alice">
+          <div class="scatter" id="alice">
             <p>Alice in Wonderland (Lewis Carroll, 1865)</p>
           </div>
 
-          <div class="sketch" id="pride">
+          <div class="scatter" id="pride">
             <p>Pride and Prejudice (Jane Austen, 1813)</p>
           </div>
 
@@ -109,22 +109,22 @@
       </footer>
 
       <script>
-          var slideIndex = 1;
-          showDivs(slideIndex);
+          var slideIndexScatter = 1;
+          showDivs(slideIndexsScatter);
 
           function plusDivs(n) {
-            showDivs(slideIndex += n);
+            showDivs(slideIndexScatter += n);
           }
 
           function showDivs(n) {
             var i;
-            var x = document.getElementsByClassName("slides");
-            if (n > x.length) {slideIndex = 1}
+            var x = document.getElementsByClassName("scatter");
+            if (n > x.length) {slideIndexScatter = 1}
             if (n < 1) {slideIndex = x.length}
             for (i = 0; i < x.length; i++) {
               x[i].style.display = "none";
             }
-            x[slideIndex-1].style.display = "block";
+            x[slideIndexScatter-1].style.display = "block";
           }
         </script>
         <script>
