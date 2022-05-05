@@ -170,6 +170,14 @@ img.sketch-hidden1 {
   padding-top: 10px;
 }
 
+img.sketch-hidden2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 10px;
+}
+
 div.report {
   margin: auto;
   padding-top: 15vh;
