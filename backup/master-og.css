@@ -11,8 +11,13 @@ a .in-text {
 }
 
 h1 {
+  color: black;
+  font-size: 13rem;
+}
+
+h2 {
   color: white;
-  font-size: 7vw;
+  font-size: 10vw;
 }
 
 * {
@@ -20,8 +25,7 @@ h1 {
 }
 
 body {
-
-  background-color: #FAA613;
+  margin: 0;
 }
 
 footer {
@@ -36,36 +40,6 @@ footer {
 
 }
 
-header {
-
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 10vh;
-  vertical-align: center;
-  /* background-color: white; */
-}
-header h1 {
-  font-size: 3.5vw;
-}
-header .header-left {
-  float: left;
-}
-header .header-right {
-  float: right;
-}
-header .fa {
-  padding-top: 4.5vh;
-  font-size: 2.5vw;
-  color: white;
-  width: 50px;
-  text-align: left;
-  text-decoration: none;
-}
-
-.content {
-  margin: 5vw;
-  margin-left: 25vw;
-}
 
 section {
   width: 100%;
@@ -111,12 +85,12 @@ button.button1:hover {
 }
 
 
-/* .content {
+.content {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 
-} */
+}
 
 .headline {
   color: black;
