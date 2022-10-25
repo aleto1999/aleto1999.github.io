@@ -3,7 +3,7 @@ p {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 a .in-text {
@@ -12,7 +12,17 @@ a .in-text {
 
 h1 {
   color: white;
-  font-size: 7vw;
+  font-size: 6.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-family: "Times New Roman", Times, serif;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5vw;
+  line-height: 1.5;
 }
 
 * {
@@ -22,6 +32,7 @@ h1 {
 body {
 
   background-color: #FAA613;
+  color: white;
 }
 
 footer {
@@ -67,29 +78,27 @@ header .fa {
   margin-left: 25vw;
 }
 
-section {
-  width: 100%;
-  padding: 0 7%;
-  display: table;
-  margin: 0;
-  max-width: none;
-  height: 100vh;*/
-
+.about {
+  text-align: left;
+  color: white;
 
 }
 
-section.home {
-
-  /*background: url("../images/back_collage.png");*/
-  background-size: cover;
-  background-color: black;
-
+.about .left-col {
+  float: left;
+  width: 15%;
+}
+.about .right-col {
+  float: right;
+  width: 85%;
 }
 
-section.about {
 
-  background-color: white;
-
+.projects {
+  padding-top: 30vh;
+}
+.projects h1 {
+  font-size: 3vw;
 }
 
 button.button1 {
@@ -119,24 +128,28 @@ button.button1:hover {
 } */
 
 .headline {
-  color: black;
-  font-family: sans-serif;
-  font-size: 2.5rem;
+  color: white;
+  font-size: 3.1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding-bottom: 20px;
 
 }
 
 .sub-header {
-  color: black;
+  color: white;
   font-family: sans-serif;
   font-size: 1.5rem;
 }
 
 .highlight {
-  transition: all 0.2s ease;
+
+  transition: all 0.1s ease;
+
 }
 
 .highlight:hover {
-  text-shadow: 0 2.1rem #e4b1ab, 0 -2.1rem #e4b1ab;
+  text-shadow: 0 1rem #C8A2C8, 0 -1rem #C8A2C8;
   cursor: pointer;
 }
 
@@ -145,7 +158,7 @@ button.button1:hover {
 }
 
 .topnav-highlight:hover {
-  text-shadow: 0 2.1rem #e4b1ab;
+  text-shadow: 0 4.1rem #e4b1ab;
   cursor: pointer;
 }
 
