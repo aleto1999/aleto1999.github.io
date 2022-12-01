@@ -335,6 +335,8 @@ div .image-description {
 }
 
 .row {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
