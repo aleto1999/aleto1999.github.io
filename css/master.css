@@ -64,7 +64,14 @@ body {
 }
 
 .movable {
-    background-image: url("../images/stripe-white-paper-texture-background.jpg");
+    /* background-image: url("../images/stripe-white-paper-texture-background.jpg"); */
+    background: repeating-linear-gradient(
+      to bottom, /* Direction from top to bottom */
+      #FFFFFF,
+      #FFFFFF 2px,
+      #e9e9e9 2px,
+      #e9e9e9 5px
+    );
     color: black;
     text-align: center;
     cursor: grab; /* Cursor indicates it can be grabbed */
@@ -83,7 +90,26 @@ body {
 
 #content {
   height: 50vh;
-  width: 55vh;
+  width: 60vh;
+}
+
+.top-bar {
+    /* Top bar specific styles */
+    background-color: #708090;
+    opacity: 60%;
+    color: red;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Pushes logo to the left and links to the right */
+    align-items: center;
+    /* Makes sure the top bar doesn't grow if main content needs space */
+    flex-shrink: 0;
+}
+
+.top-bar a {
+    color: red;
+    text-decoration: none;
+    margin-left: 20px;
 }
 
 
